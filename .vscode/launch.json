@@ -1,0 +1,49 @@
+{
+    // Use IntelliSense to learn about possible attributes.
+    // Hover to view descriptions of existing attributes.
+    // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "type": "java",
+            "name": "ArrayQueue",
+            "request": "launch",
+            "mainClass": "Hw4_21002139.ex2.ArrayQueue",
+            "projectName": "HomeworkDAS_a07137e1"
+        },
+        {
+            "type": "java",
+            "name": "TestArrayBinaryTree",
+            "request": "launch",
+            "mainClass": "Hw5_21002139_PhamNgocHai.ex1.TestArrayBinaryTree",
+            "projectName": "HomeworkDAS_a07137e1"
+        },
+        {
+            "type": "java",
+            "name": "ArrayBinaryTree",
+            "request": "launch",
+            "mainClass": "Hw5_21002139_PhamNgocHai.ex1.ArrayBinaryTree",
+            "projectName": "HomeworkDAS_a07137e1"
+        },
+        {
+            "type": "java",
+            "name": "FinalMain",
+            "request": "launch",
+            "mainClass": "ranking.use_tree.ada_and_apple.FinalMain",
+            "projectName": "HomeworkDAS_a07137e1"
+        },
+        {
+            "type": "java",
+            "name": "NewMain",
+            "request": "launch",
+            "mainClass": "ranking.use_tree.ada_and_apple.NewMain",
+            "projectName": "HomeworkDAS_a07137e1"
+        },
+        {
+            "type": "java",
+            "name": "Java Debug (Launch) - Current File",
+            "request": "launch",
+            "mainClass": "${file}"
+        }
+    ]
+}
