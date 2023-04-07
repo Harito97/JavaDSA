@@ -1,12 +1,11 @@
-package DataStructureAndAlgorithms.AssignmentLT.spoj.week3;
+package ranking.use_queue.easy_queue;
 
 import java.io.DataInputStream;
 import java.io.IOException;
-// import java.time.Duration;
-// import java.time.Instant;
-// import java.util.Scanner;
+import java.util.Queue;
+import java.util.concurrent.ConcurrentLinkedQueue;
 
-public class SLPLN {
+public class EasyQueue {
     static class Reader {
         final private int BUFFER_SIZE = 1 << 16;
         private DataInputStream din;
@@ -44,74 +43,35 @@ public class SLPLN {
             do {
                 ret = ret * 10 + c - '0';
             } while ((c = read()) >= '0' && c <= '9');
-  
             if (neg)
                 return -ret;
             return ret;
         }
     }
     public static void main(String[] args) throws IOException {
-        //Instant start = Instant.now();
-        //Scanner sc = new Scanner("3 100 40 30");
         Reader reader = new Reader();
         StringBuilder builder = new StringBuilder();
+        Queue<Integer> queue = new ConcurrentLinkedQueue<>(); 
         int t = reader.nextInt();
-        int n;
-        for (int i = 0; i < t; i++) {
-            n = reader.nextInt();
-            builder.append((int) Math.pow(n, 1/3.0)).append("\n");
+        int code = 0;
+        boolean isEmpty;
+        while (t-- > 0) {
+            code = reader.nextInt();
+            if (code == 1) {
+                queue.add(reader.nextInt());
+            } else {
+                isEmpty = queue.isEmpty();
+                if (code == 2 && !isEmpty) {
+                    queue.poll();
+                } else {    
+                    if (isEmpty) {
+                        builder.append("Empty!\n");
+                    } else {
+                        builder.append(queue.peek()).append("\n");
+                    }
+                }
+            } 
         }
         System.out.println(builder.toString());
-        //sc.close();
-        // Instant end = Instant.now();
-        // System.out.println(Duration.between(start, end));
     }
 }
-
-/*
- * Số lập phương
-
-Thời gian: Không quá 2s
-
-Bộ nhớ: Không quá 256MB
-
-Đầu vào: Luồng nhập chuẩn
-
-Đầu ra: Luồng xuất chuẩn
-
- 
-
-Cần lập trình đưa ra số lớn nhất có lập phương không vượt quá số nguyên dương N.
-
-Dữ liệu vào: Dòng đầu tiên chứa một số nguyên T  biểu thị số lượng test. Mỗi test gồm một dòng duy nhất chứa một số nguyên dương N.
-
-Dữ liệu ra: Với mỗi test, hiển thị trên một dòng số lớn nhất có lập phương không vượt quá số N tương ứng
-
-Ràng buộc
-
-1 ≤ T ≤ 100
-
-1 ≤ N ≤ 10000
-
-Ví dụ:
-
-Dữ liệu vào
-	
-
-Dữ liệu ra
-
-3
-
-100
-
-40
-
-30
-	
-
-4
-
-3
-
-3
- */

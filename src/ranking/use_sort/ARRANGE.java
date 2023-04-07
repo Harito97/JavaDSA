@@ -1,4 +1,4 @@
-package DataStructureAndAlgorithms.AssignmentLT.spoj;
+package ranking.use_sort;
 
 import java.io.DataInputStream;
 import java.io.IOException;

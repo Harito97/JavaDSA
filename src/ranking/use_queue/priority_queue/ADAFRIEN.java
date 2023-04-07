@@ -1,4 +1,4 @@
-package DataStructureAndAlgorithms.AssignmentLT.spoj;
+package ranking.use_queue.priority_queue;
 
 //import java.util.Comparator;
 import java.util.HashMap;

@@ -1,4 +1,4 @@
-package DataStructureAndAlgorithms.AssignmentLT.spoj;
+package ranking.use_stack;
 
 import java.io.BufferedReader;
 import java.io.IOException;

@@ -1,9 +1,9 @@
-package DataStructureAndAlgorithms.AssignmentLT.spoj.week3;
+package ranking.use_math;
 
 import java.io.DataInputStream;
 import java.io.IOException;
 
-public class SNTOFIBO {
+public class SONTGT {
     static class Reader {
         final private int BUFFER_SIZE = 1 << 16;
         private DataInputStream din;
@@ -47,55 +47,33 @@ public class SNTOFIBO {
             return ret;
         }
     }
+    
     public static void main(String[] args) throws IOException {
         Reader sc = new Reader();
         StringBuilder builder = new StringBuilder();
         int t = sc.nextInt();
-        int x;
+        int p = 0;
         for (int i = 0; i < t; i++) {
-            x = sc.nextInt();
-            builder.append(isFibonacci(x));
+            p = sc.nextInt();
+            builder.append(isFactorialPrime(p));
         }
         System.out.print(builder.toString());
     }
 
-    // A utility method that returns true if x is perfect square
-    public static  boolean isPerfectSquare(int x) {
-        int s = (int) Math.sqrt(x);
-        return (s*s == x);
-    }
-      
-    // Returns true if n is a Fibonacci Number, else false
-    public static String isFibonacci(int n) {
-        // n is Fibonacci if one of 5*n*n + 4 or 5*n*n - 4 or both
-        // is a perfect square
-        if (isPerfectSquare(5*n*n + 4) || isPerfectSquare(5*n*n - 4)) {
-            return "YES\n";
+    public static String isFactorialPrime(int p) {
+        int factorial = 1;
+        for (int i = 2; i <= p; i++) {
+            factorial *= i;
+            if (p == factorial || p == factorial - 1 || p == factorial + 1) {
+                return "YES\n";
+            }
         }
         return "NO\n";
     }
-
-    // public static String isFibonacci(int x) {
-    //     if (x == 2 || x == 3) {
-    //         return "YES\n";
-    //     }
-    //     int first = 2;
-    //     int second = 3;
-    //     int temp = 5;
-    //     while (temp < x) {
-    //         temp = first + second;
-    //         first = second;
-    //         second = temp;
-    //     }
-    //     if (x == temp) {
-    //         return "YES\n";
-    //     }
-    //     return "NO\n";
-    // }
 }
 
 /*
- * Số nguyên tố Fibonacci
+ * Số nguyên tố giai thừa
 
 Thời gian: Không quá 2s
 
@@ -107,11 +85,13 @@ Bộ nhớ: Không quá 256MB
 
  
 
-Số nguyên tố P được gọi là số nguyên tố Fibonacci nếu nó cũng là số Fibonacci. Cần lập trình xác định số nguyên tố P có phải là số nguyên tố Fibonacci hay không.
+Số nguyên tố giai thừa (factorial prime) là một số nguyên tố nhỏ hơn hoặc lớn hơn một so với một giai thừa hoặc chính nó là một giai thừa. Một vài số nguyên tố giai thừa là: 2, 3, 5,..
 
-Dữ liệu vào: Dòng đầu tiên chứa một số nguyên T biểu thị số lượng test. Mỗi test gồm một dòng duy nhất chứa một số nguyên dương P là một số nguyên tố.
+Cần lập trình kiểm tra xem một số nguyên tố có phải số nguyên tố giai thừa hay không.
 
-Dữ liệu ra: Với mỗi test, hiển thị trên một dòng xâu YES nếu số nguyên tố tương ứng là số Fibonacci, ngược lại đưa ra NO.
+Dữ liệu vào: Dòng đầu tiên chứa một số nguyên T  biểu thị số lượng test. Mỗi test gồm một dòng duy nhất chứa một số nguyên dương P là một số nguyên tố.
+
+Dữ liệu ra: Với mỗi test, hiển thị trên một dòng xâu YES nếu số nguyên tố tương ứng là số nguyên tố giai thừa, ngược lại đưa ra NO.
 
 Ràng buộc
 
@@ -130,7 +110,7 @@ Dữ liệu ra
 
 2
 
-5
+3
 
 11
 	

@@ -1,4 +1,4 @@
-package DataStructureAndAlgorithms.AssignmentLT.spoj.week3;
+package ranking.use_sort;
 
 import java.io.DataInputStream;
 import java.io.IOException;
