@@ -3,7 +3,7 @@ package ranking.use_list.class_leader;
 import java.io.DataInputStream;
 import java.io.IOException;
 
-public class Main {
+public class FinalMain {
     public static void main(String[] args) throws IOException {
         Reader reader = new Reader();
         StringBuilder builder = new StringBuilder();
