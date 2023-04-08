@@ -34,7 +34,7 @@ public class InversionCount {
         long inv_count = 0;
         if (right > left) {
             mid = (right + left) / 2;
-            inv_count = mergeSort(arr, temp, left, mid);
+            inv_count += mergeSort(arr, temp, left, mid);
             inv_count += mergeSort(arr, temp, mid + 1, right);
             inv_count += merge(arr, temp, left, mid + 1, right);
         }
@@ -129,3 +129,44 @@ public class InversionCount {
         }
     }
 }
+
+/*
+ * INVCNT - Số lần đảo ngược
+ * 
+ * Cho A[0...n - 1] là một dãy gồm n số nguyên dương phân biệt. Nếu i < j và
+ * A[i] > A[j] thì cặp (i, j) được gọi là một nghịch đảo của A. Cho n và một
+ * mảng A, nhiệm vụ của bạn là tìm số nghịch đảo của A.
+ * 
+ * Đầu vào
+ * 
+ * Dòng đầu tiên chứa t, số lượng testcase theo sau là khoảng trống. Mỗi t bài
+ * kiểm tra bắt đầu bằng một số n (n <= 200000). Sau đó n + 1 dòng tiếp theo. Ở
+ * dòng thứ i ghi một số A[i - 1] (A[i - 1] <= 10^7). Dòng thứ (n + 1) là khoảng
+ * trống.
+ * 
+ * Đầu ra
+ * 
+ * Đối với mỗi đầu ra thử nghiệm, một dòng cho biết số lần nghịch đảo của A.
+ * 
+ * Ví dụ
+ * 
+ * Đầu vào:
+ * 2
+ * 
+ * 3
+ * 3
+ * 1
+ * 2
+ * 
+ * 5
+ * 2
+ * 3
+ * 8
+ * 6
+ * 1
+ * 
+ * 
+ * Đầu ra:
+ * 2
+ * 5
+ */

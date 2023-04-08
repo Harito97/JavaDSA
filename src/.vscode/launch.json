@@ -6,6 +6,48 @@
     "configurations": [
         {
             "type": "java",
+            "name": "TestArrayBinaryTree",
+            "request": "launch",
+            "mainClass": "Hw5_21002139_PhamNgocHai.ex1.TestArrayBinaryTree",
+            "projectName": "src_13777ab6"
+        },
+        {
+            "type": "java",
+            "name": "ARRANGEusingQuickSort",
+            "request": "launch",
+            "mainClass": "ranking.use_sort.ARRANGEusingQuickSort",
+            "projectName": "src_13777ab6"
+        },
+        {
+            "type": "java",
+            "name": "Main",
+            "request": "launch",
+            "mainClass": "ranking.use_sort.Main",
+            "projectName": "src_13777ab6"
+        },
+        {
+            "type": "java",
+            "name": "InversionCount",
+            "request": "launch",
+            "mainClass": "ranking.use_sort.InversionCount",
+            "projectName": "src_13777ab6"
+        },
+        {
+            "type": "java",
+            "name": "ARRANGE",
+            "request": "launch",
+            "mainClass": "ranking.use_sort.ARRANGE",
+            "projectName": "src_13777ab6"
+        },
+        {
+            "type": "java",
+            "name": "ONPTransformTheExpression",
+            "request": "launch",
+            "mainClass": "ranking.use_stack.ONPTransformTheExpression",
+            "projectName": "src_13777ab6"
+        },
+        {
+            "type": "java",
             "name": "ONPTransformTheExpression",
             "request": "launch",
             "mainClass": "DataStructureAndAlgorithms.AssignmentLT.spoj.ONPTransformTheExpression",

@@ -1,7 +1,5 @@
 package Hw5_21002139_PhamNgocHai.ex1;
 
-import java.util.concurrent.ForkJoinPool.ForkJoinWorkerThreadFactory;
-
 public class ArrayBinaryTree<E> implements BinaryTreeInterface<E> {
     private E[] array;
     private int numberNode = 0;
@@ -25,16 +23,15 @@ public class ArrayBinaryTree<E> implements BinaryTreeInterface<E> {
     }
 
     public int numChildren(E p) {
-        for (int i = 0; i < numberNode; i++) {
-            if (array[i] != null && array[i].equals(p)) {
-                if (array[2 * i] != null && array[2 * i + 1] == null)
-                    return 1;
-                if (array[2 * i] == null && array[2 * i + 1] != null)
-                    return 1;
-                if (array[2 * i] != null && array[2 * i + 1] != null)
-                    return 2;
-            }
-        }
+        int i = findElementWithPreOrderTraversal(array, 0, p);
+        if (i < 0)
+            return 0;
+        if (array[2 * i + 2] != null && array[2 * i + 1] == null)
+            return 1;
+        if (array[2 * i + 2] == null && array[2 * i + 1] != null)
+            return 1;
+        if (array[2 * i + 2] != null && array[2 * i + 1] != null)
+            return 2;
         return 0;
     }
 
@@ -52,18 +49,6 @@ public class ArrayBinaryTree<E> implements BinaryTreeInterface<E> {
     }
 
     public E sibling(E p) {
-        // if (array[0].equals(p))
-        // return null;
-        // for (int i = 1; i < numberNode; i++) {
-        // if (array[i] == null)
-        // continue;
-        // if (array[i].equals(p)) {
-        // if (i % 2 != 0) {
-        // return array[i / 2 * 2 + 2];
-        // }
-        // return array[i / 2 * 2 - 1];
-        // }
-        // }
         int index = findElementWithPreOrderTraversal(array, 0, p);
         if (index <= 0) {
             return null;
@@ -75,12 +60,6 @@ public class ArrayBinaryTree<E> implements BinaryTreeInterface<E> {
     }
 
     public E left(E p) {
-        // for (int i = 0; i < numberNode; i++) {
-        // if (array[i] == null)
-        // continue;
-        // if ((array[i].equals(p)) && (2 * i < defaultSize - 1))
-        // return array[2 * i + 1];
-        // }
         int index = findElementWithPreOrderTraversal(array, 0, p);
         if (index == -1) {
             // don't exist any node have value element p
@@ -92,12 +71,6 @@ public class ArrayBinaryTree<E> implements BinaryTreeInterface<E> {
     }
 
     public E right(E p) {
-        // for (int i = 0; i < numberNode; i++) {
-        // if (array[i] == null)
-        // continue;
-        // if ((array[i].equals(p)) && (2 * i < defaultSize - 2))
-        // return array[2 * i + 2];
-        // }
         int index = findElementWithPreOrderTraversal(array, 0, p);
         if (index == -1) {
             // don't exist any node have value element p
@@ -216,31 +189,49 @@ public class ArrayBinaryTree<E> implements BinaryTreeInterface<E> {
         return oldValue;
     }
 
-    // /**
-    // * @param coefficient
-    // * coefficient is a double - has value from 0 and should be 2
-    // *
-    // * if coefficient < 1 then defaultSize will descending
-    // * (if number of point already in tree are smaller)
-    // * if coefficient > 1 then defaultSize will ascending
-    // *
-    // * warning that because defaultSize is int (max near to
-    // * 2,000,000,000) so
-    // * max coefficient that still work like expected is near to
-    // * 20,000,000.0
-    // */
+    public void print() {
+        StringBuilder builder = new StringBuilder();
+        for (int i = 0; i < defaultSize; i++)
+            builder.append(array[i]).append(" | ");
+        System.out.println("| " + builder);
+    }
 
-    // // waiting to update this function in future
-    // public void changeMaxNumberPointOfTree(double coefficient) {
-    // int newSize = (int) (defaultSize * coefficient);
-    // if (coefficient <= 0 || newSize > n) {
-    // System.out.println("Coefficient can't acceptable!");
-    // }
-    // defaultSize = newSize;
-    // }
+    /**
+     * @param coefficient
+     *                    coefficient is a double - has value from 0 and should be 2
+     *
+     *                    if coefficient < 1 then defaultSize will descending
+     *                    (if number of point already in tree are smaller)
+     *                    if coefficient > 1 then defaultSize will ascending
+     *
+     *                    warning that because defaultSize is int (max near to
+     *                    2,000,000,000) so
+     *                    max coefficient that still work like expected is near to
+     *                    20,000,000.0
+     */
+
+    public void changeMaxNumberPointOfTree(double coefficient) {
+        int newSize = (int) (defaultSize * coefficient);
+        int lastIndexNotNull = 0;
+        for (int i = 0; i < defaultSize; i++) {
+            if (array[i] != null) 
+                lastIndexNotNull = i;
+        }
+        if (coefficient <= 0 || newSize <= lastIndexNotNull) {
+            System.out.println("Coefficient can't acceptable!");
+            return;
+        }
+        E[] newArray = (E[]) new Object[newSize];
+        System.arraycopy(array, 0, newArray, 0, lastIndexNotNull + 1);
+        defaultSize = newSize;
+        array = newArray;
+    }
 
     private int findElementWithPreOrderTraversal(E[] tree, int index, E p) {
-        if (index >= defaultSize) {
+        // remember that our start from index 0 - is root
+        // the left of index i is 2 * i + 1
+        // the right of index i is 2 * i + 2
+        if (index < 0 || index >= numberNode) {
             return -1;
         }
         if (tree[index] != null && tree[index].equals(p)) {
@@ -250,7 +241,8 @@ public class ArrayBinaryTree<E> implements BinaryTreeInterface<E> {
         int rightChildIndex = 2 * index + 2;
         findElementWithPreOrderTraversal(tree, leftChildIndex, p);
         findElementWithPreOrderTraversal(tree, rightChildIndex, p);
-        return -1;
+        index++;
+        return findElementWithPreOrderTraversal(tree, index, p);
     }
 
     private void delete(int p) {

@@ -4,7 +4,7 @@ import java.io.DataInputStream;
 import java.io.IOException;
 import java.util.Arrays;
 
-public class ARRANGE {
+public class ARRANGEusingMergeSort {
     static class Reader {
         final private int BUFFER_SIZE = 1 << 16;
         private DataInputStream din;
@@ -59,13 +59,17 @@ public class ARRANGE {
             int[] input = new int[n];
             for (int i = 0; i < n; i++) {
                 int number = reader.nextInt();
+                // print all number 1 in front
                 if (number == 1) {
                     builder.append("1 ");
                 } else {
+                    // input will have only number bigger than 1
                     input[index] = number;
                     ++index;
                 }
             }
+            // check the special case if only have 2 and 3
+            // result will be 1 1 ... 1 2 3
             if (index == 2 &&
                     ((input[0] == 2 && input[1] == 3) ||
                             (input[0] == 3 && input[1] == 2))) {
@@ -73,6 +77,10 @@ public class ARRANGE {
                 continue;
             }
 
+            // if input is in normal case then 
+            // simply sort the array ascending like [0, 2, 3, 4, 5, ...]
+            // and print it from back to front 
+            // (result will be 1 1 ... 1 n n-1 n-2 ... 3 2)
             Arrays.sort(input);
             int i = input.length - 1;
             while (i >= 0 && input[i] != 0) {

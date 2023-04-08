@@ -5,17 +5,22 @@ import java.io.FileInputStream;
 import java.io.IOException;
 import java.util.Comparator;
 
-public class Main {
+public class ARRANGEusingQuickSortandCustomerComparator {
     public static void main(String[] args) throws IOException {
         Reader reader = new Reader();
         int t = reader.nextInt();
         StringBuilder builder = new StringBuilder();
+        boolean checkIsSpecialCase = true; // only have 2 and 3 and 1 1 ... 1
         while (t-- > 0) {
             int n = reader.nextInt();
             int[] arr = new int[n];
-            for (int i = 0; i < n; i++)
+            for (int i = 0; i < n; i++) {
                 arr[i] = reader.nextInt();
-            quickSort(arr, 0, arr.length - 1);
+                if (arr[i] != 1 || arr[i] != 2 || arr[i] != 3) {
+                    checkIsSpecialCase = false;
+                }
+            }
+            quickSort(arr, 0, arr.length - 1, checkIsSpecialCase);
             for (int i : arr)
                 builder.append(i + " ");
             builder.append("\n");
@@ -23,16 +28,16 @@ public class Main {
         System.out.println(builder.toString());
     }
 
-    public static void quickSort(int[] arr, int low, int high) {
+    public static void quickSort(int[] arr, int low, int high, boolean checkIsSpecialCase) {
         if (low < high) {
-            int pi = partition(arr, low, high);
-            quickSort(arr, low, pi - 1);
-            quickSort(arr, pi + 1, high);
+            int pi = partition(arr, low, high, checkIsSpecialCase);
+            quickSort(arr, low, pi - 1, checkIsSpecialCase);
+            quickSort(arr, pi + 1, high, checkIsSpecialCase);
         }
     }
 
-    private static int partition(int[] arr, int low, int high) {
-        CustomComparator comparator = new CustomComparator();
+    private static int partition(int[] arr, int low, int high, boolean checkIsSpecialCase) {
+        CustomComparator comparator = new CustomComparator(checkIsSpecialCase);
         int pivot = arr[high];
         int i = (low - 1);
         for (int j = low; j < high; j++) {
@@ -53,15 +58,25 @@ public class Main {
 }
 
 class CustomComparator implements Comparator<Integer> {
+    boolean checkIsSpecialCase = true;
+
+    public CustomComparator(boolean check) {
+        checkIsSpecialCase = check;
+    }
+
     public int compare(Integer a, Integer b) {
         if (a == 1)
             return -1;
         if (b == 1)
             return 1;
-        if (a == 2 && b == 3)
-            return -1;
-        if (a == 3 && b == 2)
-            return 1;
+
+        if (checkIsSpecialCase == true) {
+            if (a == 2 && b == 3)
+                return -1;
+            if (a == 3 && b == 2)
+                return 1;
+        }
+        
         return b - a;
     }
 }

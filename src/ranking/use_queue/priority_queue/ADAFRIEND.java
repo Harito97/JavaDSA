@@ -6,7 +6,7 @@ import java.util.PriorityQueue;
 import java.io.DataInputStream;
 import java.io.IOException;
 
-public class ADAFRIEN {
+public class ADAFRIEND {
     public static void main(String[] args) throws IOException {
         Reader reader = new Reader();
         int n = reader.nextInt();

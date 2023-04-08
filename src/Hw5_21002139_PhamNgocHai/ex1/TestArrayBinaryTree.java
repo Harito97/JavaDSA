@@ -10,6 +10,18 @@ public class TestArrayBinaryTree {
         tree.setLeft(1, 23);
         tree.setLeft(2, 89);
         tree.setRight(2, 56);
+        tree.print();
+        // print
+        // | 90 | 80 | 34 | 23 | null | 89 | 56 | null | null | null | null | null
+        // | null | null | null | null | null | null | null | null | null | null | null
+        // | null | null | null | null | null | null | null | null | null | null | null
+        // | null | null | null | null | null | null | null | null | null | null | null
+        // | null | null | null | null | null | null | null | null | null | null | null
+        // | null | null | null | null | null | null | null | null | null | null | null
+        // | null | null | null | null | null | null | null | null | null | null | null
+        // | null | null | null | null | null | null | null | null | null | null | null
+        // | null | null | null | null | null | null | null | null | null | null | null |
+        
 
         // tree now is
         // -----90
@@ -28,11 +40,14 @@ public class TestArrayBinaryTree {
         System.out.println(tree.parent(34)); // print 90
         System.out.println(tree.parent(23) + "\n"); // print 80
 
-        // // test changeMaxNumberPointOfTree()
-        // tree.changeMaxNumberPointOfTree(0);
-        // tree.changeMaxNumberPointOfTree(0.05);
-        // tree.changeMaxNumberPointOfTree(1.5);
-        // System.out.println(tree.n + "\n");
+        // test changeMaxNumberPointOfTree()
+        tree.changeMaxNumberPointOfTree(0); // print Coefficient can't acceptable!
+        // coefficient = x0.0 is not acceptable
+        tree.changeMaxNumberPointOfTree(0.05); // print Coefficient can't acceptable!
+        // coefficient = x0.05 is not acceptable
+        tree.changeMaxNumberPointOfTree(1.5); // print nothing
+        // coefficient = x1.5 is acceptable and defaultSize now is 150 instep of 100
+        System.out.println(tree.size() + "\n"); // print 6
 
         // test sibling(), parent() in special case
         System.out.println(tree.sibling(null)); // print null

@@ -39,27 +39,31 @@ public class ONPTransformTheExpression {
         
         for (int i = 0; i < exp.length(); ++i) {
             char c = exp.charAt(i);
-            
+
             if (Character.isLetterOrDigit(c))
                 result.append(c);
-                
+
             else if (c == '(')
                 stack.push(c);
-                
+
             else if (c == ')') {
                 while (!stack.isEmpty() && stack.peek() != '(')
                     result.append(stack.pop());
-                    
-                stack.pop();
+
+                stack.pop(); // delete character '(' from stack
             } else {
+                // other case => c is a operator then we compare precedence with other operator from stack
+                // while operators in stack more precedence then pop it in result
                 while (!stack.isEmpty() && precedence(c) <= precedence(stack.peek()))
                     result.append(stack.pop());
-                    
+
+                // push to stack the operator has less precedence
                 stack.push(c);
             }
-        
+
         }
         
+        // pop the operator left behind in stack (has the same precedence)
         while (!stack.isEmpty())
             result.append(stack.pop());
             
