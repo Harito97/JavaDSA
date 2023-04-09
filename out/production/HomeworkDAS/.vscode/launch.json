@@ -6,6 +6,13 @@
     "configurations": [
         {
             "type": "java",
+            "name": "App",
+            "request": "launch",
+            "mainClass": "ex4/Hw5_21002139_PhamNgocHai.ex4.src.main.java.ex4.App",
+            "projectName": "src_13777ab6"
+        },
+        {
+            "type": "java",
             "name": "SlicingFloorPlan",
             "request": "launch",
             "mainClass": "Hw5_21002139_PhamNgocHai.ex4.SlicingFloorPlan",

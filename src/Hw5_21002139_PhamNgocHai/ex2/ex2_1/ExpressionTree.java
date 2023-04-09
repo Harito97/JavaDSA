@@ -2,6 +2,7 @@ package Hw5_21002139_PhamNgocHai.ex2.ex2_1;
 
 import Hw5_21002139_PhamNgocHai.ex1.ex1_2.LinkedBinaryTree;
 
+// we test this class in ex2.ex2_2 as the require of the homework
 public class ExpressionTree<E> extends LinkedBinaryTree<E> {
     public ExpressionTree(Node<E> root) {
         super(root);
