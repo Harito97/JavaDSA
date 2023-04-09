@@ -1,5 +1,8 @@
 package Hw5_21002139_PhamNgocHai.ex1;
 
+import java.io.FileWriter;
+import java.io.IOException;
+
 public interface BinaryTreeInterface<E> {
     E root(); // value of the root (null if there is no root)
 

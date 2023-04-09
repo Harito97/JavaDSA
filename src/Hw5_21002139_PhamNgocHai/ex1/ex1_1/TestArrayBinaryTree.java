@@ -1,4 +1,4 @@
-package Hw5_21002139_PhamNgocHai.ex1;
+package Hw5_21002139_PhamNgocHai.ex1.ex1_1;
 
 public class TestArrayBinaryTree {
     public static void main(String[] args) {
@@ -10,7 +10,7 @@ public class TestArrayBinaryTree {
         tree.setLeft(1, 23);
         tree.setLeft(2, 89);
         tree.setRight(2, 56);
-        tree.print();
+        System.out.println(tree.toString());
         // print
         // | 90 | 80 | 34 | 23 | null | 89 | 56 | null | null | null | null | null
         // | null | null | null | null | null | null | null | null | null | null | null

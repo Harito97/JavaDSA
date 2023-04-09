@@ -2,7 +2,6 @@ package ranking.use_tree.ada_and_apple;
 
 import java.io.DataInputStream;
 import java.io.IOException;
-import java.util.*;
 
 public class FinalMain {
     static int N; // số phần tử trong mảng

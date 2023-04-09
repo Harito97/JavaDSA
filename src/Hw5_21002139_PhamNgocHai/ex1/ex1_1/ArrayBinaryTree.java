@@ -1,4 +1,9 @@
-package Hw5_21002139_PhamNgocHai.ex1;
+package Hw5_21002139_PhamNgocHai.ex1.ex1_1;
+
+import java.io.FileWriter;
+import java.io.IOException;
+
+import Hw5_21002139_PhamNgocHai.ex1.BinaryTreeInterface;
 
 public class ArrayBinaryTree<E> implements BinaryTreeInterface<E> {
     private E[] array;
@@ -189,12 +194,61 @@ public class ArrayBinaryTree<E> implements BinaryTreeInterface<E> {
         return oldValue;
     }
 
-    public void print() {
+    /**
+     * @return String of elements follow array index increasing
+     */
+    public String toString() {
         StringBuilder builder = new StringBuilder();
+        builder.append("| ");
+
         for (int i = 0; i < defaultSize; i++)
             builder.append(array[i]).append(" | ");
-        System.out.println("| " + builder);
+
+        return builder.toString();
     }
+    
+    private static final int COUNT = 10;
+    public void visualize(E data, int space) {
+		// Base case
+	    if (data == null)
+	        return;
+	 
+	    // Increase distance between levels
+	    space += COUNT;
+	 
+	    // Process right child first
+	    visualize(this.right(data), space);
+	 
+	    // Print current node after space count
+	    System.out.print("\n");
+	    for (int i = COUNT; i < space; i++)
+	        System.out.print(" ");
+	    System.out.print(data + "\n");
+	 
+	    // Process left child
+	    visualize(this.left(data), space);
+	}
+	
+	public void writeFile(E root, int space, FileWriter write) throws IOException {
+		// Base case
+	    if (root == null)
+	        return;
+	 
+	    // Increase distance between levels
+	    space += COUNT;
+	 
+	    // Process right child first
+	    writeFile(this.right(root), space, write);
+	 
+	    // Print current node after space count
+	    write.write("\n");
+	    for (int i = COUNT; i < space; i++)
+	        write.write(" ");
+	    write.write(root + "\n");
+	 
+	    // Process left child
+	    writeFile(this.left(root), space, write);
+	}
 
     /**
      * @param coefficient

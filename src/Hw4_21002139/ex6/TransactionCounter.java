@@ -1,7 +1,6 @@
 package Hw4_21002139.ex6;
 
 import java.util.LinkedList;
-import java.util.Queue;
 
 public class TransactionCounter {
     private Customer beingServedCustomer;

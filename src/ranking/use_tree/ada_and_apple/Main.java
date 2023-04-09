@@ -2,7 +2,6 @@ package ranking.use_tree.ada_and_apple;
 
 import java.io.DataInputStream;
 import java.io.IOException;
-import java.io.InputStreamReader;
 
 public class Main {
     static int[] parent;
