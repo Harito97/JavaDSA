@@ -1,6 +1,5 @@
 package Hw5_21002139_PhamNgocHai.ex2.ex2_2;
 
-// import Hw5_21002139_PhamNgocHai.ex1.ex1_2.LinkedBinaryTree;
 import Hw5_21002139_PhamNgocHai.ex2.ex2_1.ExpressionTree;
 import Hw5_21002139_PhamNgocHai.ex3.BuildTreeExpression;
 

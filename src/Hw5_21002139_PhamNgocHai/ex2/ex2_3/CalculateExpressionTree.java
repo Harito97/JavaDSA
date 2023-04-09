@@ -8,7 +8,7 @@ public class CalculateExpressionTree {
         return evaluateExpressionTree(tree.getRoot());
     }
 
-    private static double evaluateExpressionTree(Node node) {
+    private static double evaluateExpressionTree(Node<String> node) {
         if (node == null) {
             return 0;
         }

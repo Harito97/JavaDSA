@@ -6,6 +6,69 @@
     "configurations": [
         {
             "type": "java",
+            "name": "SlicingFloorPlan",
+            "request": "launch",
+            "mainClass": "Hw5_21002139_PhamNgocHai.ex4.SlicingFloorPlan",
+            "projectName": "HomeworkDAS_a07137e1"
+        },
+        {
+            "type": "java",
+            "name": "TestCalculateExpression",
+            "request": "launch",
+            "mainClass": "Hw5_21002139_PhamNgocHai.ex2.ex2_3.TestCalculateExpression",
+            "projectName": "HomeworkDAS_a07137e1"
+        },
+        {
+            "type": "java",
+            "name": "TestExpressionTreePrint",
+            "request": "launch",
+            "mainClass": "Hw5_21002139_PhamNgocHai.ex2.ex2_2.TestExpressionTreePrint",
+            "projectName": "HomeworkDAS_a07137e1"
+        },
+        {
+            "type": "java",
+            "name": "TestPrintLinkedTreeToFile",
+            "request": "launch",
+            "mainClass": "Hw5_21002139_PhamNgocHai.ex1.ex1_3.TestPrintLinkedTreeToFile",
+            "projectName": "HomeworkDAS_a07137e1"
+        },
+        {
+            "type": "java",
+            "name": "TestPrintArrayTreeToFile",
+            "request": "launch",
+            "mainClass": "Hw5_21002139_PhamNgocHai.ex1.ex1_3.TestPrintArrayTreeToFile",
+            "projectName": "HomeworkDAS_a07137e1"
+        },
+        {
+            "type": "java",
+            "name": "TestLinkedBinaryTree",
+            "request": "launch",
+            "mainClass": "Hw5_21002139_PhamNgocHai.ex1.ex1_2.TestLinkedBinaryTree",
+            "projectName": "HomeworkDAS_a07137e1"
+        },
+        {
+            "type": "java",
+            "name": "TestBuildTreeExpression",
+            "request": "launch",
+            "mainClass": "Hw5_21002139_PhamNgocHai.ex3.TestBuildTreeExpression",
+            "projectName": "HomeworkDAS_a07137e1"
+        },
+        {
+            "type": "java",
+            "name": "TestArrayBinaryTree",
+            "request": "launch",
+            "mainClass": "Hw5_21002139_PhamNgocHai.ex1.ex1_1.TestArrayBinaryTree",
+            "projectName": "HomeworkDAS_a07137e1"
+        },
+        {
+            "type": "java",
+            "name": "SimpleArrayList",
+            "request": "launch",
+            "mainClass": "Hw3_21002139.ex3.SimpleArrayList",
+            "projectName": "HomeworkDAS_a07137e1"
+        },
+        {
+            "type": "java",
             "name": "ArrayQueue",
             "request": "launch",
             "mainClass": "Hw4_21002139.ex2.ArrayQueue",
