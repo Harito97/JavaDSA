@@ -6,6 +6,76 @@
     "configurations": [
         {
             "type": "java",
+            "name": "TestMinHeapPriorityQueue",
+            "request": "launch",
+            "mainClass": "Hw6_21002139_PhamNgocHai.ex2.TestMinHeapPriorityQueue",
+            "projectName": "HomeworkDAS_6ce7f3d6"
+        },
+        {
+            "type": "java",
+            "name": "TestPriorityQueueWithDifferKeyAndElement",
+            "request": "launch",
+            "mainClass": "Hw6_21002139_PhamNgocHai.ex1.ex1_5.TestPriorityQueueWithDifferKeyAndElement",
+            "projectName": "HomeworkDAS_6ce7f3d6"
+        },
+        {
+            "type": "java",
+            "name": "TestPriorityQueueWithSameKeyAndElement",
+            "request": "launch",
+            "mainClass": "Hw6_21002139_PhamNgocHai.ex1.ex1_5.TestPriorityQueueWithSameKeyAndElement",
+            "projectName": "HomeworkDAS_6ce7f3d6"
+        },
+        {
+            "type": "java",
+            "name": "TestSortedLinkedPriorityQueue",
+            "request": "launch",
+            "mainClass": "Hw6_21002139_PhamNgocHai.ex1.ex1_4.TestSortedLinkedPriorityQueue",
+            "projectName": "HomeworkDAS_6ce7f3d6"
+        },
+        {
+            "type": "java",
+            "name": "TestUnsortedLinkedPriorityQueue",
+            "request": "launch",
+            "mainClass": "Hw6_21002139_PhamNgocHai.ex1.ex1_3.TestUnsortedLinkedPriorityQueue",
+            "projectName": "HomeworkDAS_6ce7f3d6"
+        },
+        {
+            "type": "java",
+            "name": "TestUnsortedArrayPriorityQueue",
+            "request": "launch",
+            "mainClass": "Hw6_21002139_PhamNgocHai.ex1.ex1_1.TestUnsortedArrayPriorityQueue",
+            "projectName": "HomeworkDAS_6ce7f3d6"
+        },
+        {
+            "type": "java",
+            "name": "TestSortedArrayPriorityQueue",
+            "request": "launch",
+            "mainClass": "Hw6_21002139_PhamNgocHai.ex1.ex1_2.TestSortedArrayPriorityQueue",
+            "projectName": "HomeworkDAS_6ce7f3d6"
+        },
+        {
+            "type": "java",
+            "name": "TestSortedArrayPriorityQueue",
+            "request": "launch",
+            "mainClass": "Hw6_21002139_PhamNgocHai.ex1.ex1_2.TestSortedArrayPriorityQueue",
+            "projectName": "HomeworkDAS_a07137e1"
+        },
+        {
+            "type": "java",
+            "name": "UnsortedArrayPriorityQueue",
+            "request": "launch",
+            "mainClass": "Hw6_21002139_PhamNgocHai.ex1.ex1_1.UnsortedArrayPriorityQueue",
+            "projectName": "HomeworkDAS_a07137e1"
+        },
+        {
+            "type": "java",
+            "name": "TestUnsortedArrayPriorityQueue",
+            "request": "launch",
+            "mainClass": "Hw6_21002139_PhamNgocHai.ex1.ex1_1.TestUnsortedArrayPriorityQueue",
+            "projectName": "HomeworkDAS_a07137e1"
+        },
+        {
+            "type": "java",
             "name": "TicTacToe",
             "request": "launch",
             "mainClass": "Hw5_21002139_PhamNgocHai.ex5.TicTacToe",

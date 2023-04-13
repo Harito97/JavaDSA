@@ -1,13 +1,13 @@
 package Hw4_21002139.ex6;
 
 public class Customer {
-    private int serviceCode;
+    //private int serviceCode;
     private long timeCome;
     private long timeGetInTransaction;
     private long timeDone;
 
     public Customer(int serviceCode) {
-        this.serviceCode = serviceCode;
+        //this.serviceCode = serviceCode;
         this.timeCome = System.nanoTime();
     }
 

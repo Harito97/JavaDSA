@@ -12,6 +12,7 @@ import java.util.Queue;
 //import java.util.List;
 import java.util.Set;
 
+@SuppressWarnings("unchecked")
 public class Ada_And_Apple {
     // static int n;
     static byte[] type;

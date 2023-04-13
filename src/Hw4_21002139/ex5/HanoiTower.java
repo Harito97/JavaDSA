@@ -3,6 +3,7 @@ package Hw4_21002139.ex5;
 import java.util.Scanner;
 import java.util.Stack;
 
+@SuppressWarnings("unchecked")
 public class HanoiTower {
     public static int N;
     public static long step;

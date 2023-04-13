@@ -9,11 +9,13 @@ public class ArrayQueue<E> implements QueueInterface<E> {
     private int count = 0;
     private int default_size = 5;
 
+    @SuppressWarnings("unchecked")
     public ArrayQueue(int capacity) {
         n = capacity;
         queue = (E[]) new Object[capacity];
     }
 
+    @SuppressWarnings("unchecked")
     public ArrayQueue() {
         n = default_size;
         queue = (E[]) new Object[default_size];
@@ -26,6 +28,7 @@ public class ArrayQueue<E> implements QueueInterface<E> {
         return queue[top];
     }
 
+    @SuppressWarnings("unchecked")
     @Override
     public void enqueue(E element) {
         if (count == n) {

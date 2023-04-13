@@ -2,6 +2,7 @@ package Hw1_21002139.ex2;
 
 import java.util.Scanner;
 
+@SuppressWarnings("unchecked")
 public class Array<T> {
     T[] array;
 

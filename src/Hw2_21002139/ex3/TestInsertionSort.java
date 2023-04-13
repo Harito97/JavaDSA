@@ -19,8 +19,8 @@ public class TestInsertionSort {
         //int[] array = new int[] {4, 3, 2, 6, 2, 4, 6, 9, 10, 43};
         //int[] array = new int[] {-5, -8, 9, 10, 11, 4, 3, 2, 8};
         //int[] array = new int[] {0, 1, 2, 3, 4, 5, 6, 7, 8, 9};
-        int[] array = {-496, 13, -285, -178, 599};
-        //int[] array = generateRandomArray();
+        //int[] array = {-496, 13, -285, -178, 599};
+        int[] array = generateRandomArray();
 
         InsertionSort insertionSort = new InsertionSort(array);
 

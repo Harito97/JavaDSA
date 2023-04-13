@@ -15,6 +15,7 @@ public class NewIdea {
     static TreeMap<Integer, ArrayList<Integer>> map = new TreeMap<>();
     static Set<Integer> keys;
 
+    @SuppressWarnings("unchecked")
     public static void main(String[] args) throws IOException {
         int n = reader.nextInt();
         int q = reader.nextInt();

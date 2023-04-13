@@ -10,6 +10,7 @@ public class ArrayBinaryTree<E> implements BinaryTreeInterface<E> {
     private int numberNode = 0;
     private int defaultSize = 100;
 
+    @SuppressWarnings("unchecked")
     public ArrayBinaryTree() {
         array = (E[]) new Object[defaultSize];
     }
@@ -275,6 +276,7 @@ public class ArrayBinaryTree<E> implements BinaryTreeInterface<E> {
             System.out.println("Coefficient can't acceptable!");
             return;
         }
+        @SuppressWarnings("unchecked")
         E[] newArray = (E[]) new Object[newSize];
         System.arraycopy(array, 0, newArray, 0, lastIndexNotNull + 1);
         defaultSize = newSize;

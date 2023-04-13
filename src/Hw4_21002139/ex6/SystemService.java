@@ -27,19 +27,19 @@ public class SystemService {
         for (int i = 0; i < numberTransaction; i++) {
             transactionCounters[i] = new TransactionCounter();
         }
-        // Thuc thi 1 ngay phuc vu (gia su chi dien ra trong 180s)
-        System.out.println("Thoi gian SystemService phuc vu la: 180s");
-        System.out.println("Hay ngoi doi 180s de chung toi thu thap duoc du lieu thong ke :)\n");
+        // Thúc thi 1 ngay phúc vu (gia su chi diên ra trong 180s)
+        System.out.println("Thoi gian SystemService phúc vu la: 180s");
+        System.out.println("Hay ngoi doi 180s de chung toi thu tháp dược du lieu thong ke :)\n");
 
-        // Tao ra 1 luong chay chuong trinh
+        // Tao ra 1 luồng chay chương trinh
 
         while (flag) {
             if (System.currentTimeMillis() > end) {
                 flag = false;
             }
             // Một số hoạt động tốn kém trên mục.
-            MyRunnableOne r1 = new MyRunnableOne("Khach den SystemService de duoc phuc vu");
-            MyRunnableTwo r2 = new MyRunnableTwo("Qua trinh phuc vu trong SystemService");
+            MyRunnableOne r1 = new MyRunnableOne("Khách den SystemService de dược phúc vu");
+            MyRunnableTwo r2 = new MyRunnableTwo("Qua trinh phúc vu trong SystemService");
 
             Thread t1 = new Thread(r1);
             Thread t2 = new Thread(r2);
@@ -53,9 +53,9 @@ public class SystemService {
     }
 
     static void statisticalData() {
-        System.out.println("So khach den SystemService la: " + numberOfCustomerComeToSystemService);
+        System.out.println("So khách den SystemService la: " + numberOfCustomerComeToSystemService);
         System.out.println(
-                "So khach da duoc phuc vu la: " + (numberOfCustomerComeToSystemService - customers.size()) + "\n");
+                "So khách da dược phúc vu la: " + (numberOfCustomerComeToSystemService - customers.size()) + "\n");
         for (int i = 0; i < transactionCounters.length; i++) {
             System.out.println("Information of transaction counter " + i + " is: ");
             System.out.println(transactionCounters[i].toStringInformation());
@@ -63,12 +63,12 @@ public class SystemService {
     }
 
     static class MyRunnableOne implements Runnable {
-        // Luong 1 thuc hien viec ngau nhien them 1 khach vao danh sach khach den
-        // SystemService cho duoc phuc vu
-        private String name;
+        // Luồng 1 lam việc ngau nhiên them 1 khách vao danh sách khách den
+        // SystemService cho  phúc vu
+        //private String name;
 
         public MyRunnableOne(String name) {
-            this.name = name;
+            //this.name = name;
         }
 
         public void run() {
@@ -89,11 +89,11 @@ public class SystemService {
     }
 
     static class MyRunnableTwo implements Runnable {
-        // Luong 2 thuc hien cac cong viec phuc vu khach trong SystemService
-        private String name;
+        // Luồng 2 lam cac cong việc phúc vu khách trong SystemService
+        //private String name;
 
         public MyRunnableTwo(String name) {
-            this.name = name;
+            //this.name = name;
         }
 
         public void run() {

@@ -3,6 +3,7 @@ package Hw3_21002139.ex3;
 import java.util.Arrays;
 import java.util.Iterator;
 
+@SuppressWarnings("unchecked")
 public class SimpleArrayList<T> implements ListInterface<T> {
     private T[] array;
     private int n = 0;

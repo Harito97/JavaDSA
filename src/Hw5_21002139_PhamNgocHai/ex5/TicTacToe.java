@@ -15,7 +15,7 @@ import java.util.Scanner;
  * Các lá là trạng thái trò chơi cuối cùng hoặc ở độ sâu vượt quá mà chúng ta
  * không muốn khám phá. Chúng tôi ghi điểm cho mỗi lá với một giá trị cho biết
  * trạng thái này tốt đối với người chơi A. Trong các trò chơi lớn, như cờ vua,
- * chúng ta phải sử dụng một hàm điểm heuris-tic, nhưng đối với các trò chơi
+ * chúng ta phải sử dụng một hàm điểm houris-tic, nhưng đối với các trò chơi
  * nhỏ, như Tic-Tac-Toe, chúng ta có thể xây dựng toàn bộ cây trò chơi và ghi
  * điểm cho lá là +1, 0, -1, cho biết liệu người chơi A có chiến thắng, hòa hoặc
  * thua trong cấu hình đó. Một thuật toán tốt để lựa chọn các nước đi là
@@ -172,6 +172,7 @@ public class TicTacToe {
                 }
                 board[row][col] = PLAYER_O;
                 currentPlayer = PLAYER_X;
+                scanner.close();
             }
             printBoard();
         }

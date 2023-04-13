@@ -9,9 +9,11 @@ public class ArrayStack<E> implements StackInterface<E> {
     private int t = -1; // index of the top element in stack
     
     public ArrayStack() {
-        this(CAPACITY); 
-    } 
+        this(CAPACITY);
+    }
+    
     // constructs stack with default capacity
+    @SuppressWarnings("unchecked")
     public ArrayStack(int capacity) {
         // constructs stack with given capacity
         data = (E[]) new Object[capacity]; // safe cast; compiler may give warning

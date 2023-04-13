@@ -17,6 +17,7 @@ public class NewMain {
     static int[] dp = new int[N];
     static int[] child = new int[N];
 
+    @SuppressWarnings("unchecked")
     public static void main(String[] args) throws IOException {
         Reader sc = new Reader();
         N = sc.nextInt();
@@ -40,7 +41,7 @@ public class NewMain {
         tout = new int[N];
         time = 0;
         dfs(0, -1, 0);
-        preprocess();
+        preProcess();
         StringBuilder sb = new StringBuilder();
         for (int i = 0; i < Q; i++) {
             int type = sc.nextInt();
@@ -83,7 +84,7 @@ public class NewMain {
         }
     }
 
-    static void preprocess() {
+    static void preProcess() {
         for (int i = 1; i <= logN; i++) {
             for (int j = 0; j < N; j++) {
                 parent[j][i] = parent[parent[j][i - 1]][i - 1];

@@ -2,6 +2,7 @@ package Hw1_21002139.ex6;
 
 import java.util.Iterator;
 
+@SuppressWarnings("unchecked")
 public class SimpleArrayList<T> implements ListInterface<T> {
     private T[] array;
     private int n = 0;
