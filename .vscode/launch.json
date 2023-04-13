@@ -6,6 +6,13 @@
     "configurations": [
         {
             "type": "java",
+            "name": "TestPriorityQueueWithDifferKeyAndElement",
+            "request": "launch",
+            "mainClass": "Hw6_21002139_PhamNgocHai.ex1.ex1_5.TestPriorityQueueWithDifferKeyAndElement",
+            "projectName": "HomeworkDAS_119b3f7d"
+        },
+        {
+            "type": "java",
             "name": "TestMinHeapPriorityQueue",
             "request": "launch",
             "mainClass": "Hw6_21002139_PhamNgocHai.ex2.TestMinHeapPriorityQueue",
