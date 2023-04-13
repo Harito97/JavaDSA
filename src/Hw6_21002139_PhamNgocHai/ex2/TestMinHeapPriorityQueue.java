@@ -1,6 +1,5 @@
 package Hw6_21002139_PhamNgocHai.ex2;
 
-import Hw6_21002139_PhamNgocHai.ex1.ex1_2.SortedArrayPriorityQueue.ArrEntry;
 
 public class TestMinHeapPriorityQueue {
     public static void main(String[] args) {
@@ -12,12 +11,12 @@ public class TestMinHeapPriorityQueue {
 
         System.out.println("The min heap priority queue now is: \n" + queue);
         
-        queue.upHeap();
+        //queue.upHeap();
         System.out.println("-------------------------------------");
         System.out.println("Use up heap!");
         System.out.println("The min heap priority queue now is: \n" + queue);
         
-        queue.downHeap();
+        //queue.downHeap();
         System.out.println("-------------------------------------");
         System.out.println("Use down heap!");
         System.out.println("The min heap priority queue now is: \n" + queue);

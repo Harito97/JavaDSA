@@ -1,0 +1,154 @@
+{
+    // Use IntelliSense to learn about possible attributes.
+    // Hover to view descriptions of existing attributes.
+    // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "type": "java",
+            "name": "App",
+            "request": "launch",
+            "mainClass": "ex4/Hw5_21002139_PhamNgocHai.ex4.src.main.java.ex4.App",
+            "projectName": "src_13777ab6"
+        },
+        {
+            "type": "java",
+            "name": "SlicingFloorPlan",
+            "request": "launch",
+            "mainClass": "Hw5_21002139_PhamNgocHai.ex4.SlicingFloorPlan",
+            "projectName": "src_13777ab6"
+        },
+        {
+            "type": "java",
+            "name": "TestCalculateExpression",
+            "request": "launch",
+            "mainClass": "Hw5_21002139_PhamNgocHai.ex2.ex2_3.TestCalculateExpression",
+            "projectName": "src_13777ab6"
+        },
+        {
+            "type": "java",
+            "name": "TestExpressionTreePrint",
+            "request": "launch",
+            "mainClass": "Hw5_21002139_PhamNgocHai.ex2.ex2_2.TestExpressionTreePrint",
+            "projectName": "src_13777ab6"
+        },
+        {
+            "type": "java",
+            "name": "TestBuildTreeExpression",
+            "request": "launch",
+            "mainClass": "Hw5_21002139_PhamNgocHai.ex3.TestBuildTreeExpression",
+            "projectName": "src_13777ab6"
+        },
+        {
+            "type": "java",
+            "name": "BuildTreeExpression",
+            "request": "launch",
+            "mainClass": "Hw5_21002139_PhamNgocHai.ex3.BuildTreeExpression",
+            "projectName": "src_13777ab6"
+        },
+        {
+            "type": "java",
+            "name": "CalculateExpressionTree",
+            "request": "launch",
+            "mainClass": "Hw5_21002139_PhamNgocHai.ex2.ex2_3.CalculateExpressionTree",
+            "projectName": "src_13777ab6"
+        },
+        {
+            "type": "java",
+            "name": "TestPrintArrayTreeToFile",
+            "request": "launch",
+            "mainClass": "Hw5_21002139_PhamNgocHai.ex1.ex1_3.TestPrintArrayTreeToFile",
+            "projectName": "src_13777ab6"
+        },
+        {
+            "type": "java",
+            "name": "TestLinkedBinaryTree",
+            "request": "launch",
+            "mainClass": "Hw5_21002139_PhamNgocHai.ex1.ex1_2.TestLinkedBinaryTree",
+            "projectName": "src_13777ab6"
+        },
+        {
+            "type": "java",
+            "name": "TestArrayBinaryTree",
+            "request": "launch",
+            "mainClass": "Hw5_21002139_PhamNgocHai.ex1.ex1_1.TestArrayBinaryTree",
+            "projectName": "src_13777ab6"
+        },
+        {
+            "type": "java",
+            "name": "TestPrintLinkedTreeToFile",
+            "request": "launch",
+            "mainClass": "Hw5_21002139_PhamNgocHai.ex1.ex1_3.TestPrintLinkedTreeToFile",
+            "projectName": "src_13777ab6"
+        },
+        {
+            "type": "java",
+            "name": "PrintTreeToFile",
+            "request": "launch",
+            "mainClass": "Hw5_21002139_PhamNgocHai.ex1.ex1_3.PrintTreeToFile",
+            "projectName": "src_13777ab6"
+        },
+        {
+            "type": "java",
+            "name": "TestLinkedBinaryTree",
+            "request": "launch",
+            "mainClass": "Hw5_21002139_PhamNgocHai.ex1.TestLinkedBinaryTree",
+            "projectName": "src_13777ab6"
+        },
+        {
+            "type": "java",
+            "name": "TestArrayBinaryTree",
+            "request": "launch",
+            "mainClass": "Hw5_21002139_PhamNgocHai.ex1.TestArrayBinaryTree",
+            "projectName": "src_13777ab6"
+        },
+        {
+            "type": "java",
+            "name": "ARRANGEusingQuickSort",
+            "request": "launch",
+            "mainClass": "ranking.use_sort.ARRANGEusingQuickSort",
+            "projectName": "src_13777ab6"
+        },
+        {
+            "type": "java",
+            "name": "Main",
+            "request": "launch",
+            "mainClass": "ranking.use_sort.Main",
+            "projectName": "src_13777ab6"
+        },
+        {
+            "type": "java",
+            "name": "InversionCount",
+            "request": "launch",
+            "mainClass": "ranking.use_sort.InversionCount",
+            "projectName": "src_13777ab6"
+        },
+        {
+            "type": "java",
+            "name": "ARRANGE",
+            "request": "launch",
+            "mainClass": "ranking.use_sort.ARRANGE",
+            "projectName": "src_13777ab6"
+        },
+        {
+            "type": "java",
+            "name": "ONPTransformTheExpression",
+            "request": "launch",
+            "mainClass": "ranking.use_stack.ONPTransformTheExpression",
+            "projectName": "src_13777ab6"
+        },
+        {
+            "type": "java",
+            "name": "ONPTransformTheExpression",
+            "request": "launch",
+            "mainClass": "DataStructureAndAlgorithms.AssignmentLT.spoj.ONPTransformTheExpression",
+            "projectName": ""
+        },
+        {
+            "type": "java",
+            "name": "Current File",
+            "request": "launch",
+            "mainClass": "${file}"
+        }
+    ]
+}

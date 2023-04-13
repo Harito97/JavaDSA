@@ -15,7 +15,7 @@ public class Application {
     private static List<Shape> generateRandomListOfShape() {
         Random random = new Random();
         List<Shape> list = new ArrayList<>();
-        int n = random.nextInt(0, 1000);
+        int n = random.nextInt(0, 100);
         int encodeOfShape = 0;
         double radius, width, height;
         for (int i = 0; i < n; i++) {
