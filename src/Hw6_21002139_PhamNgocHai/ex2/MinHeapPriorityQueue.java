@@ -1,63 +1,106 @@
 package Hw6_21002139_PhamNgocHai.ex2;
 
-import Hw6_21002139_PhamNgocHai.ex1.ex1_2.SortedArrayPriorityQueue;
+import Hw6_21002139_PhamNgocHai.ex1.Entry;
+import Hw6_21002139_PhamNgocHai.ex1.ex1_2.SortedArrayPriorityQueue.ArrEntry;
 
-public class MinHeapPriorityQueue<K extends Comparable<K>, E> extends
-        SortedArrayPriorityQueue<K, E> {
+public class MinHeapPriorityQueue<K extends Comparable<K>, E> {
 
-    ArrEntry<K, E> heapPQ[];
+    private ArrEntry<K, E> heapPQ[];
+    private int n = 0;
+    private final int DEFAULT_SIZE = 1000;
+    private int root = 1;
+
+    @SuppressWarnings("unchecked")
+    public MinHeapPriorityQueue() {
+        heapPQ = (ArrEntry<K, E>[]) new ArrEntry[DEFAULT_SIZE];
+    }
 
     @SuppressWarnings("unchecked")
     public MinHeapPriorityQueue(int capacity) {
-        heapPQ = new ArrEntry[capacity];
-        // n = 0;
+        heapPQ = (ArrEntry<K, E>[]) new ArrEntry[capacity];
     }
 
-    // Các phương thức bổ sung 
-    // write lai upHeap() va downHeap()
-    // protected void upHeap() {
-    //     // vun lên
-    //     int k = n - 1;
-    //     while (k > 0) {
-    //         int p = (k - 1) / 2;
-    //         ArrEntry<K, E> item = heapPQ[k];
-    //         ArrEntry<K, E> parent = heapPQ[p];
-    //         if (item.getKey().compareTo(parent.getKey()) < 0) {
-    //             // swap
-    //             heapPQ[k] = parent;
-    //             heapPQ[p] = item;
+    public int size() {
+        return n;
+    }
 
-    //             // move up one level
-    //             k = p;
-    //         } else {
-    //             break;
-    //         }
-    //     }
-    // }
+    public boolean isEmpty() {
+        return n == 0;
+    }
 
-    // protected void downHeap() {
-    //     // vun xuống
-    //     int k = 0;
-    //     int leftChild = 2 * k + 1;
-    //     while (leftChild < n) {
-    //         int min = leftChild;
-    //         int rightChild = leftChild + 1;
-    //         if (rightChild < n) {
-    //             if (heapPQ[leftChild].getKey().compareTo(heapPQ[rightChild].getKey()) > 0) {
-    //                 min = rightChild;
-    //             }
-    //         }
-    //         if (heapPQ[k].getKey().compareTo(heapPQ[min].getKey()) > 0) {
-    //             // swap
-    //             ArrEntry<K, E> temp = heapPQ[k];
-    //             heapPQ[k] = heapPQ[min];
-    //             heapPQ[min] = temp;
+    // Các phương thức bổ sung
+    protected void upHeap() {
+        int i = this.size();
+        while (i > 1 && heapPQ[i / 2].getKey().compareTo(heapPQ[i].getKey()) == 1) {
+            swap(i / 2, i);
+            i /= 2;
+        }
+    }
 
-    //             k = min;
-    //             leftChild = 2 * k + 1;
-    //         } else {
-    //             break;
-    //         }
-    //     }
-    // }
+    protected void downHeap() {
+        int i = 1;
+        while (i <= n) {
+            if (2 * i + 1 <= n)
+                if (heapPQ[i].getKey().compareTo(heapPQ[2 * i].getKey()) > 0
+                        || heapPQ[i].getKey().compareTo(heapPQ[2 * i + 1].getKey()) > 0) {
+                    int j = heapPQ[2 * i].getKey().compareTo(heapPQ[2 * i + 1].getKey()) < 0 ? 2 * i : 2 * i + 1;
+                    swap(i, j);
+                    i = j;
+                } else
+                    break;
+            else if (2 * i <= n) {
+                if (heapPQ[i].getKey().compareTo(heapPQ[2 * i].getKey()) > 0)
+                    swap(i, 2 * i);
+                i = 2 * i;
+            } else
+                break;
+        }
+    }
+
+    public void insert(Entry<K, E> entry) {
+        if (n == heapPQ.length - 1) {
+            // System.out.println("Full heap!");
+            return;
+        }
+        heapPQ[++n] = (ArrEntry<K, E>) entry;
+        upHeap();
+    }
+
+    public void insert(K k, E e) {
+        Entry<K, E> entry = new ArrEntry<>(k, e);
+        insert(entry);
+    }
+
+    public Entry<K, E> removeMin() {
+        if (n == 0) {
+            // System.out.println("Empty heap!");
+            return null;
+        }
+        Entry<K, E> min = heapPQ[root];
+        heapPQ[root] = heapPQ[n--];
+        downHeap();
+        return min;
+    }
+
+    public Entry<K, E> min() {
+        return heapPQ[root];
+    }
+
+    public ArrEntry<K, E>[] getHeapPQ() {
+        return heapPQ;
+    }
+
+    public String toString() {
+        String content = "";
+        for (int i = 1; i <= n; i++)
+            content += heapPQ[i].toString() + "\n";
+        return content;
+    }
+
+    private void swap(int i, int j) {
+        ArrEntry<K, E> temp = heapPQ[i];
+        heapPQ[i] = heapPQ[j];
+        heapPQ[j] = temp;
+    }
+
 }

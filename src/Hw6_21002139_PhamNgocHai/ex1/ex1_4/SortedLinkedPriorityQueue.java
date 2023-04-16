@@ -96,6 +96,9 @@ public class SortedLinkedPriorityQueue<K extends Comparable<K>, E> implements
     @Override
     public Entry<K, E> removeMin() {
         NodeEntry<K, E> min = head;
+        if (head == null) {
+            return null;
+        }
         head = head.next;
         --n;
         return min;
@@ -146,7 +149,7 @@ public class SortedLinkedPriorityQueue<K extends Comparable<K>, E> implements
         }
 
         public String toString() {
-            return key + " " + element;
+            return "[" + key + " " + element + "]";
         }
     }
 }

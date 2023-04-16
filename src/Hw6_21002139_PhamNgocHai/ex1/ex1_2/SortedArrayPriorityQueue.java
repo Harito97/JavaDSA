@@ -24,7 +24,7 @@ public class SortedArrayPriorityQueue<K extends Comparable<K>, E> implements
         }
 
         public String toString() {
-            return this.key + " " + this.element;
+            return "[" + this.key + " " + this.element + "]";
         }
     }
 
@@ -45,6 +45,10 @@ public class SortedArrayPriorityQueue<K extends Comparable<K>, E> implements
         array = new ArrEntry[capacity];
     }
 
+    public ArrEntry<K, E>[] getArray() {
+        return array;
+    }
+
     public int size() {
         return n;
     }
@@ -53,7 +57,6 @@ public class SortedArrayPriorityQueue<K extends Comparable<K>, E> implements
         return n == 0;
     }
 
-    // @SuppressWarnings("unchecked")
     public void insert(Entry<K, E> entry) {
         if (n == array.length) {
             System.out.println("Full priority queue!");
@@ -65,9 +68,12 @@ public class SortedArrayPriorityQueue<K extends Comparable<K>, E> implements
         // them 1 cai sap xep o day
         for (int i = n; i > 0; i--) {
             if (array[i].getKey().compareTo(array[i - 1].getKey()) >= 0) {
+                // swap
                 ArrEntry<K, E> temp = array[i];
                 array[i] = array[i - 1];
                 array[i - 1] = temp;
+            } else {
+                break;
             }
         }
         ++n;
@@ -81,6 +87,7 @@ public class SortedArrayPriorityQueue<K extends Comparable<K>, E> implements
 
         Entry<K, E> entry = new ArrEntry<K, E>(k, e);
         insert(entry);
+        //System.out.println(this.toString());
     }
 
     public Entry<K, E> removeMin() {

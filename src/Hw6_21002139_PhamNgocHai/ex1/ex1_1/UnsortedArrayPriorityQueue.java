@@ -24,7 +24,7 @@ public class UnsortedArrayPriorityQueue<K extends Comparable<K>, E> implements
         }
 
         public String toString() {
-            return this.key + " " + this.element;
+            return "[" + this.key + " " + this.element + "]";
         }
     }
 
@@ -70,7 +70,7 @@ public class UnsortedArrayPriorityQueue<K extends Comparable<K>, E> implements
 
     public Entry<K, E> removeMin() {
         ArrEntry<K, E> currentMin = array[0];
-        if (n == 1) {
+        if (n <= 1) {
             array[0] = null;
             --n;
             return currentMin;

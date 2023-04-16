@@ -1,0 +1,109 @@
+
+*With size of data set = 50
+1. UnsortedArrayPriorityQueue ... 
+Time to insert(): 165115ns
+Time to removeMin(): 11056ns
+
+2. SortedArrayPriorityQueue ... 
+Time to insert(): 898744ns
+Time to removeMin(): 9178ns
+
+3. UnsortedLinkedPriorityQueue ... 
+Time to insert(): 956587ns
+Time to removeMin(): 16810ns
+
+4. SortedLinkedPriorityQueue ... 
+Time to insert(): 1862100ns
+Time to removeMin(): 4235ns
+
+
+*With size of data set = 100
+1. UnsortedArrayPriorityQueue ... 
+Time to insert(): 127760ns
+Time to removeMin(): 50442ns
+
+2. SortedArrayPriorityQueue ... 
+Time to insert(): 791794ns
+Time to removeMin(): 6308ns
+
+3. UnsortedLinkedPriorityQueue ... 
+Time to insert(): 34396ns
+Time to removeMin(): 14867ns
+
+4. SortedLinkedPriorityQueue ... 
+Time to insert(): 1076809ns
+Time to removeMin(): 21958ns
+
+
+*With size of data set = 200
+1. UnsortedArrayPriorityQueue ... 
+Time to insert(): 144875ns
+Time to removeMin(): 29329ns
+
+2. SortedArrayPriorityQueue ... 
+Time to insert(): 549948ns
+Time to removeMin(): 31608ns
+
+3. UnsortedLinkedPriorityQueue ... 
+Time to insert(): 79532ns
+Time to removeMin(): 28361ns
+
+4. SortedLinkedPriorityQueue ... 
+Time to insert(): 742688ns
+Time to removeMin(): 38899ns
+
+
+*With size of data set = 400
+1. UnsortedArrayPriorityQueue ... 
+Time to insert(): 1053222ns
+Time to removeMin(): 77502ns
+
+2. SortedArrayPriorityQueue ... 
+Time to insert(): 2813613ns
+Time to removeMin(): 32704ns
+
+3. UnsortedLinkedPriorityQueue ... 
+Time to insert(): 308856ns
+Time to removeMin(): 111636ns
+
+4. SortedLinkedPriorityQueue ... 
+Time to insert(): 3013434ns
+Time to removeMin(): 34446ns
+
+
+*With size of data set = 800
+1. UnsortedArrayPriorityQueue ... 
+Time to insert(): 264592ns
+Time to removeMin(): 59172ns
+
+2. SortedArrayPriorityQueue ... 
+Time to insert(): 9244205ns
+Time to removeMin(): 52995ns
+
+3. UnsortedLinkedPriorityQueue ... 
+Time to insert(): 218531ns
+Time to removeMin(): 83939ns
+
+4. SortedLinkedPriorityQueue ... 
+Time to insert(): 9558482ns
+Time to removeMin(): 31217ns
+
+
+*With size of data set = 1600
+1. UnsortedArrayPriorityQueue ... 
+Time to insert(): 242344ns
+Time to removeMin(): 67255ns
+
+2. SortedArrayPriorityQueue ... 
+Time to insert(): 34039211ns
+Time to removeMin(): 61877ns
+
+3. UnsortedLinkedPriorityQueue ... 
+Time to insert(): 220775ns
+Time to removeMin(): 74371ns
+
+4. SortedLinkedPriorityQueue ... 
+Time to insert(): 48507051ns
+Time to removeMin(): 113976ns
+
+

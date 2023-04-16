@@ -6,7 +6,7 @@ import Hw6_21002139_PhamNgocHai.ex1.PriorityQueueInterface;
 public class UnsortedLinkedPriorityQueue<K extends Comparable<K>, E> implements
         PriorityQueueInterface<K, E> {
 
-    //@SuppressWarnings("hiding")
+    // @SuppressWarnings("hiding")
     public static class NodeEntry<K, E> implements Entry<K, E> {
         private K key;
         private E element;
@@ -32,7 +32,7 @@ public class UnsortedLinkedPriorityQueue<K extends Comparable<K>, E> implements
         }
 
         public String toString() {
-            return key + " " + element;
+            return "[" + key + " " + element + "]";
         }
     }
 
@@ -104,6 +104,14 @@ public class UnsortedLinkedPriorityQueue<K extends Comparable<K>, E> implements
 
         // find min
         NodeEntry<K, E> currentMin = head;
+        
+        if (head == null) {
+            return null;
+            // đã kiểm tra điều kiện n == 0 (tương đương)
+            // nhưng để tránh biên dịch lỗi ở bài 4 (trình biên dịch jdk 20 nhạy quá sức cần
+            // thiết) nên thêm điều kiện này
+        }
+
         NodeEntry<K, E> currentNode = head.next;
         for (int i = 1; i < n; i++) {
             if (currentNode == null || currentNode.next == null) {
