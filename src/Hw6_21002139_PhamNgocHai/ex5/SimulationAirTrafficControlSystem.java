@@ -13,6 +13,7 @@ public class SimulationAirTrafficControlSystem {
     private static int i = 0;
     private static long start = System.nanoTime();
     private static long end = start + 30 * 1000 * 1000 * 1000; // run in 30s
+
     public static void main(String[] args) {
         generateData();
         MyRunnableOne r1 = new MyRunnableOne();

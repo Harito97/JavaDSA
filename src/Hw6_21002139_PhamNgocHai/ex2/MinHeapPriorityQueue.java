@@ -31,7 +31,7 @@ public class MinHeapPriorityQueue<K extends Comparable<K>, E> {
     // Các phương thức bổ sung
     protected void upHeap() {
         int i = this.size();
-        while (i > 1 && heapPQ[i / 2].getKey().compareTo(heapPQ[i].getKey()) == 1) {
+        while (i > 1 && heapPQ[i / 2].getKey().compareTo(heapPQ[i].getKey()) > 0) {
             swap(i / 2, i);
             i /= 2;
         }
@@ -39,7 +39,8 @@ public class MinHeapPriorityQueue<K extends Comparable<K>, E> {
 
     protected void downHeap() {
         int i = 1;
-        while (i <= n) {
+        int notLeaf = n / 2;
+        while (i <= notLeaf) {
             if (2 * i + 1 <= n)
                 if (heapPQ[i].getKey().compareTo(heapPQ[2 * i].getKey()) > 0
                         || heapPQ[i].getKey().compareTo(heapPQ[2 * i + 1].getKey()) > 0) {
